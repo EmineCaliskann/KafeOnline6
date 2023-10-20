@@ -13,7 +13,7 @@ namespace KafeOnline6.Data
         public decimal BirimFiyat { get; set; }
 
         
-        public  string ToString()
+        public  override string ToString()
         {
             return $"{UrunAd} {BirimFiyat:c2}";
         }

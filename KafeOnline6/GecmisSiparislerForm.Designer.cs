@@ -64,12 +64,21 @@
             // 
             // dgvSiparisler
             // 
+            dgvSiparisler.AllowUserToAddRows = false;
+            dgvSiparisler.AllowUserToDeleteRows = false;
+            dgvSiparisler.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvSiparisler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvSiparisler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSiparisler.Location = new Point(31, 34);
+            dgvSiparisler.MultiSelect = false;
             dgvSiparisler.Name = "dgvSiparisler";
+            dgvSiparisler.ReadOnly = true;
+            dgvSiparisler.RowHeadersVisible = false;
             dgvSiparisler.RowTemplate.Height = 25;
+            dgvSiparisler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvSiparisler.Size = new Size(866, 240);
             dgvSiparisler.TabIndex = 2;
+            dgvSiparisler.SelectionChanged += dgvSiparisler_SelectChanged;
             // 
             // label1
             // 
@@ -83,11 +92,16 @@
             // dgvSiparisDetaylar
             // 
             dgvSiparisDetaylar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvSiparisDetaylar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvSiparisDetaylar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvSiparisDetaylar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSiparisDetaylar.Location = new Point(18, 18);
+            dgvSiparisDetaylar.MultiSelect = false;
             dgvSiparisDetaylar.Name = "dgvSiparisDetaylar";
+            dgvSiparisDetaylar.RowHeadersVisible = false;
             dgvSiparisDetaylar.RowTemplate.Height = 25;
-            dgvSiparisDetaylar.Size = new Size(879, 350);
+            dgvSiparisDetaylar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvSiparisDetaylar.Size = new Size(879, 342);
             dgvSiparisDetaylar.TabIndex = 3;
             // 
             // label2

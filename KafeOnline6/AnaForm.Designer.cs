@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaForm));
             menuStrip1 = new MenuStrip();
             tsmİUrunler = new ToolStripMenuItem();
             tsmiGecmisSiparisler = new ToolStripMenuItem();
-            listView1 = new ListView();
+            lvwMasalar = new ListView();
+            ilMasalar = new ImageList(components);
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,21 +58,32 @@
             tsmiGecmisSiparisler.Name = "tsmiGecmisSiparisler";
             tsmiGecmisSiparisler.Size = new Size(108, 20);
             tsmiGecmisSiparisler.Text = "Geçmiş Siparişler";
+            tsmiGecmisSiparisler.Click += tsmiGecmisSiparisler_Click;
             // 
-            // listView1
+            // lvwMasalar
             // 
-            listView1.Location = new Point(0, 40);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(779, 385);
-            listView1.TabIndex = 1;
-            listView1.UseCompatibleStateImageBehavior = false;
+            lvwMasalar.LargeImageList = ilMasalar;
+            lvwMasalar.Location = new Point(0, 40);
+            lvwMasalar.Name = "lvwMasalar";
+            lvwMasalar.Size = new Size(779, 385);
+            lvwMasalar.TabIndex = 1;
+            lvwMasalar.UseCompatibleStateImageBehavior = false;
+            lvwMasalar.DoubleClick += lvwMasalar_DoubleClick;
+            // 
+            // ilMasalar
+            // 
+            ilMasalar.ColorDepth = ColorDepth.Depth8Bit;
+            ilMasalar.ImageStream = (ImageListStreamer)resources.GetObject("ilMasalar.ImageStream");
+            ilMasalar.TransparentColor = Color.Transparent;
+            ilMasalar.Images.SetKeyName(0, "dolu");
+            ilMasalar.Images.SetKeyName(1, "bos");
             // 
             // AnaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(listView1);
+            Controls.Add(lvwMasalar);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "AnaForm";
@@ -84,8 +98,9 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ListView listView1;
+        private ListView lvwMasalar;
         private ToolStripMenuItem tsmİUrunler;
         private ToolStripMenuItem tsmiGecmisSiparisler;
+        private ImageList ilMasalar;
     }
 }

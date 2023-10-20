@@ -8,7 +8,7 @@ namespace KafeOnline6.Data
 {
     public class KafeVeri
     {
-        public int MasaAdet {  get; set; }
+        public int MasaAdet { get; set; } = 20;
 
         public List<Urun> Urunler { get; set; }=new List<Urun>();//Menü
 
